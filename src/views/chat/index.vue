@@ -11,11 +11,11 @@
 </template>
 
 <script>
-    import MyHeader from "../basic/MyHeader";
-    import SearchBox from "../basic/SearchBox";
-    import ChatList from "../basic/ChatList";
-    import MyFooter from "../basic/MyFooter";
-    import MoreFun from "../basic/MoreFun";
+    import MyHeader from "../../components/Header/index";
+    import SearchBox from "../../components/Search/index";
+    import ChatList from "./module/chatList";
+    import MyFooter from "../../components/Footer/index";
+    import MoreFun from "../../components/MoreFun/index";
 
     export default {
         name: "Chat",

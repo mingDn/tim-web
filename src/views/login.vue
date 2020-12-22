@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="logo">
-            <img src="../../assets/icon/logo.png">
+            <img src="../assets/icon/logo.png">
         </div>
         <form class="load-box" @submit.prevent="load">
             <input type="number" class="account" placeholder="手机号" v-model="account"
@@ -34,7 +34,7 @@
         methods: {
             //判断账号密码是否满足登录要求
             isLoad() {
-                if (this.account.length == 11 && this.password.length >= 8) {
+                if (this.account.length === 11 && this.password.length >= 8) {
                     $("#submit").addClass("active");
                 } else {
                     $("#submit").removeClass("active");
@@ -44,8 +44,8 @@
             load() {
                 if ($("#submit").hasClass("active")) {
                     let _this = this;
-                    $.post("/tim/user/load", {account: this.account, password: this.password}, function (data) {
-                        if (data.info == 1) {
+                    $.post("/tim/user/login", {account: this.account, password: this.password}, function (data) {
+                        if (data.info === "1") {
                             _this.$store.commit("updateUser", data.user);
                             _this.$router.push("/chat");
                         } else {
@@ -106,13 +106,13 @@
         border-radius: 50%;
         border: none;
         outline: none;
-        background-image: url("../../assets/icon/load.png");
+        background-image: url("../assets/icon/load.png");
         background-size: 70px 70px;
         margin-top: 40px;
     }
 
     #submit.active {
-        background-image: url("../../assets/icon/load-active.png");
+        background-image: url("../assets/icon/load-active.png");
     }
 
     .load-link {

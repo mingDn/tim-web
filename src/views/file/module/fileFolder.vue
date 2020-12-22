@@ -18,12 +18,12 @@
         data() {
             return {
                 folder: [
-                    {name: "聊天文档", icon: require("../../assets/icon/文件夹.png")},
-                    {name: "聊天文档", icon: require("../../assets/icon/文件夹.png")},
-                    {name: "聊天文档", icon: require("../../assets/icon/文件夹.png")},
-                    {name: "聊天文档", icon: require("../../assets/icon/文件夹.png")},
-                    {name: "聊天文档", icon: require("../../assets/icon/文件夹.png")},
-                    {name: "新建文件夹", icon: require("../../assets/icon/新建文件.png")}
+                    {name: "聊天文档", icon: require("../../../assets/icon/文件夹.png")},
+                    {name: "聊天文档", icon: require("../../../assets/icon/文件夹.png")},
+                    {name: "聊天文档", icon: require("../../../assets/icon/文件夹.png")},
+                    {name: "聊天文档", icon: require("../../../assets/icon/文件夹.png")},
+                    {name: "聊天文档", icon: require("../../../assets/icon/文件夹.png")},
+                    {name: "新建文件夹", icon: require("../../../assets/icon/新建文件.png")}
                 ]
             }
         }

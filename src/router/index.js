@@ -1,14 +1,14 @@
 import VueRouter from "vue-router"
 import Vue from "vue";
-import Chat from "../components/compose/Chat";
-import File from "../components/compose/File";
-import User from "../components/compose/User";
-import Load from "../components/compose/Load";
-import Register from "../components/compose/Register";
-import Retrieve from "../components/compose/Retrieve";
-import Friends from "../components/compose/Friends";
-import Information from "../components/compose/Information";
-import Picture from "../components/compose/Picture";
+import Chat from "../views/chat/index";
+import File from "../views/file/index";
+import User from "../views/user/index";
+import Login from "../views/login";
+import Register from "../views/register";
+import Retrieve from "../views/retrieve";
+import Friends from "../views/friends/index";
+import Information from "../views/user/module/information";
+import Picture from "../views/user/module/picture";
 
 Vue.use(VueRouter)
 
@@ -17,11 +17,11 @@ const router = new VueRouter({
     routes: [
         {
             path: "/",
-            redirect: "/load"
+            redirect: "/login"
         },
         {
-            path: "/load",
-            component: Load
+            path: "/login",
+            component: Login
         },
         {
             path: "/chat",

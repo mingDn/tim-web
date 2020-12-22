@@ -1,7 +1,7 @@
 <template>
     <div>
         <router-link v-bind:to="'/' + 'load'" replace>
-            <img src="../../assets/icon/back1.png" width="30" height="30" class="back">
+            <img src="../assets/icon/back1.png" width="30" height="30" class="back">
         </router-link>
         <p class="welcome">欢迎注册QQ</p>
         <p class="welcome">每一天，乐在沟通。</p>
@@ -102,7 +102,7 @@
                         password: $("#password").val(),
                         name: $("#name").val()
                     }, function (data) {
-                        if (data.info == 1) {
+                        if (data.info === 1) {
                             alert(data.message);
                             _this.$router.push("/load");
                         } else {
@@ -188,6 +188,10 @@
 
     .agreement {
         margin: 5px 0 0 30px;
+    }
+
+    .agreement > input {
+        margin-right: 2px;
     }
 
     .agreement > p {

@@ -22,11 +22,11 @@ new Vue({
 router.beforeEach((to, from, next) => {
   setTimeout((res) => {
     if (to.meta.redirectedFrom) {
-      if (store.state.user.account != "") {
+      if (store.state.user.account !== "") {
         next();
       } else {
         next({
-          path: '/load'
+          path: '/login'
         })
       }
     } else {

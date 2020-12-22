@@ -18,18 +18,18 @@
         data() {
             return {
                 users: [
-                    {name: "ming1", header: require("../../assets/user/user1.jpg")},
-                    {name: "ming2", header: require("../../assets/user/user2.jpg")},
-                    {name: "ming3", header: require("../../assets/user/user3.jpg")},
-                    {name: "ming4", header: require("../../assets/user/user4.jpg")},
-                    {name: "ming1", header: require("../../assets/user/user1.jpg")},
-                    {name: "ming2", header: require("../../assets/user/user2.jpg")},
-                    {name: "ming3", header: require("../../assets/user/user3.jpg")},
-                    {name: "ming4", header: require("../../assets/user/user4.jpg")},
-                    {name: "ming1", header: require("../../assets/user/user1.jpg")},
-                    {name: "ming2", header: require("../../assets/user/user2.jpg")},
-                    {name: "ming3", header: require("../../assets/user/user3.jpg")},
-                    {name: "ming4", header: require("../../assets/user/user4.jpg")},
+                    {name: "ming1", header: require("../../../assets/user/user1.jpg")},
+                    {name: "ming2", header: require("../../../assets/user/user2.jpg")},
+                    {name: "ming3", header: require("../../../assets/user/user3.jpg")},
+                    {name: "ming4", header: require("../../../assets/user/user4.jpg")},
+                    {name: "ming1", header: require("../../../assets/user/user1.jpg")},
+                    {name: "ming2", header: require("../../../assets/user/user2.jpg")},
+                    {name: "ming3", header: require("../../../assets/user/user3.jpg")},
+                    {name: "ming4", header: require("../../../assets/user/user4.jpg")},
+                    {name: "ming1", header: require("../../../assets/user/user1.jpg")},
+                    {name: "ming2", header: require("../../../assets/user/user2.jpg")},
+                    {name: "ming3", header: require("../../../assets/user/user3.jpg")},
+                    {name: "ming4", header: require("../../../assets/user/user4.jpg")},
                 ]
             }
         }

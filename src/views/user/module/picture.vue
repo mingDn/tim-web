@@ -2,7 +2,7 @@
     <div>
         <div class="header">
             <router-link v-bind:to="'/user'" replace>
-                <img src="../../assets/icon/back2.png">
+                <img src="../../../assets/icon/back2.png">
             </router-link>
             <p>修改头像</p>
         </div>
@@ -43,7 +43,7 @@
             },
             submit() {
                 let _this = this;
-                if (this.file != "") {
+                if (this.file !== "") {
                     let formData = new FormData();
                     formData.append("account", this.$store.state.user.account);
                     formData.append("oldFile", this.$store.state.user.path);

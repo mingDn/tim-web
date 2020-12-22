@@ -1,7 +1,7 @@
 <template>
     <div class="background">
         <div class="header">
-            <img src="../../assets/icon/back2.png" @click="back">
+            <img src="../../../assets/icon/back2.png" @click="back">
             <p>{{ this.title }}</p>
         </div>
         <div>
@@ -9,13 +9,13 @@
                 <p>
                     <span>昵称</span>
                     {{ this.user.name }}
-                    <img src="../../assets/icon/back3.png" class="revise"
+                    <img src="../../../assets/icon/back3.png" class="revise"
                          v-if="isRevise" @click="isName = true, isBirthday= false, isSex = false">
                 </p>
                 <p>
                     <span>性别</span>
                     {{ this.user.sex }}
-                    <img src="../../assets/icon/back3.png" class="revise"
+                    <img src="../../../assets/icon/back3.png" class="revise"
                          v-if="isRevise" @click="isSex = true, isBirthday= false, isName = false">
                 </p>
                 <p v-if="!isRevise">
@@ -25,7 +25,7 @@
                 <p>
                     <span>生日</span>
                     {{ this.user.birthday }}
-                    <img src="../../assets/icon/back3.png" class="revise"
+                    <img src="../../../assets/icon/back3.png" class="revise"
                          v-if="isRevise" @click="isBirthday = true, isName= false, isSex = false">
                 </p>
             </div>
@@ -35,7 +35,7 @@
         </div>
         <div class="select-box" v-if="isRevise && (isName || isSex || isBirthday)">
             <div class="back" @click="isBirthday = false, isName= false, isSex = false">
-                <img src="../../assets/icon/back4.png">
+                <img src="../../../assets/icon/back4.png">
             </div>
             <div class="name" v-if="isName">
                 <input type="text" id="name" placeholder="输入昵称">
@@ -75,9 +75,9 @@
         },
         methods: {
             back() {
-                if (this.title == "详细资料") {
+                if (this.title === "详细资料") {
                     this.$router.push("/user");
-                } else if (this.title == "编辑资料") {
+                } else if (this.title === "编辑资料") {
                     this.title = "详细资料";
                     this.button = "编辑资料";
                     this.isRevise = false;
@@ -87,22 +87,22 @@
                 }
             },
             isFun() {
-                if (this.title == "详细资料") {
+                if (this.title === "详细资料") {
                     this.title = "编辑资料";
                     this.button = "确认修改";
                     this.isRevise = true;
-                } else if (this.title == "编辑资料") {
+                } else if (this.title === "编辑资料") {
 
                 }
             },
             getDaysInMonth(month, year) {
                 let days;
-                if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
+                if (month === 1 || month === 3 || month === 5 || month === 7 || month === 8 || month === 10 || month === 12) {
                     days = 31;
-                } else if (month == 4 || month == 6 || month == 9 || month == 11) {
+                } else if (month === 4 || month === 6 || month === 9 || month === 11) {
                     days = 30;
                 } else {
-                    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+                    if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
                         days = 29;
                     } else {
                         days = 28;

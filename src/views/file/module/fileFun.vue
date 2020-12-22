@@ -15,10 +15,10 @@
         data() {
             return {
                 fun: [
-                    {name: "最近浏览", icon: require("../../assets/icon/最近浏览.png")},
-                    {name: "本机文件", icon: require("../../assets/icon/本机文件.png")},
-                    {name: "云端文件", icon: require("../../assets/icon/云端文件.png")},
-                    {name: "工作文档", icon: require("../../assets/icon/工作文档.png")}
+                    {name: "最近浏览", icon: require("../../../assets/icon/最近浏览.png")},
+                    {name: "本机文件", icon: require("../../../assets/icon/本机文件.png")},
+                    {name: "云端文件", icon: require("../../../assets/icon/云端文件.png")},
+                    {name: "工作文档", icon: require("../../../assets/icon/工作文档.png")}
                 ]
             }
         }

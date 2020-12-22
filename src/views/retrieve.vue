@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="header">
-            <img src="../../assets/icon/back2.png" width="25" height="25" id="back" @click="back">
+            <img src="../assets/icon/back2.png" width="25" height="25" id="back" @click="back">
             <p class="title">{{ this.title }}</p>
         </div>
         <div class="wrap" id="accountWrap" v-if="!isRevise">
@@ -35,7 +35,7 @@
             }
         },
         mounted() {
-            if (this.$route.query.isLoad | this.$route.query.isLoad == "true") {
+            if (this.$route.query.isLoad || this.$route.query.isLoad === "true") {
                 this.isLoad = true;
             }
             this.revise();
@@ -49,9 +49,9 @@
                 }
             },
             back() {
-                if (this.title == "输入账号") {
+                if (this.title === "输入账号") {
                     this.$router.push("/load");
-                } else if (this.title == "修改密码") {
+                } else if (this.title === "修改密码") {
                     if (!this.isLoad) {
                         this.title = "输入账号";
                         this.isRevise = false;
@@ -69,7 +69,7 @@
                         account: _this.account,
                         verifyCode: _this.verifyCode
                     }, function (data) {
-                        if (data.info == 1) {
+                        if (data.info === 1) {
                             _this.title = "修改密码";
                             _this.isRevise = true;
                             alert(data.message);
@@ -86,14 +86,14 @@
                     rePassword = $("#rePassword").val();
                 if (password.length < 8) {
                     alert("密码为8-16个字符");
-                } else if (!(password == rePassword)) {
+                } else if (!(password === rePassword)) {
                     alert("两次输入密码不一致");
                 } else {
                     $.post("/tim/user/updatePassword", {
                         account: _this.account,
                         password: password
                     }, function (data) {
-                        if (data.info == 1) {
+                        if (data.info === 1) {
                             alert(data.message);
                         } else {
                             alert(data.message);

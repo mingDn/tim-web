@@ -22,10 +22,10 @@
 </template>
 
 <script>
-    import MyHeader from "../basic/MyHeader";
-    import MyFooter from "../basic/MyFooter";
-    import UserData from "../basic/UserData";
-    import UserFun from "../basic/UserFun";
+    import MyHeader from "../../components/Header/index";
+    import MyFooter from "../../components/Footer/index";
+    import UserData from "./module/userData";
+    import UserFun from "./module/userFun";
 
     export default {
         name: "user",
@@ -52,7 +52,7 @@
             logOut() {
                 let _this = this;
                 $.post("/tim/user/logout", {account: this.$store.state.user.account}, function (data) {
-                    if (data.info == 1) {
+                    if (data.info === 1) {
                         _this.$store.commit("updateUser", data.user);
                         _this.$router.push("/load");
                     } else {

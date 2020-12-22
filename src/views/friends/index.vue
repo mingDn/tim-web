@@ -31,7 +31,7 @@
 </template>
 
 <script>
-    import SearchBox from "../basic/SearchBox";
+    import SearchBox from "../../components/Search/index";
 
     export default {
         name: "Friends",

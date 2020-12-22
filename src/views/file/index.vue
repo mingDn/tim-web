@@ -12,12 +12,12 @@
 </template>
 
 <script>
-    import MyHeader from "../basic/MyHeader";
-    import SearchBox from "../basic/SearchBox";
-    import FileFun from "../basic/FileFun";
-    import MyFooter from "../basic/MyFooter";
-    import FileFolder from "../basic/FileFolder";
-    import MoreFun from "../basic/MoreFun";
+    import MyHeader from "../../components/Header/index";
+    import SearchBox from "../../components/Search/index";
+    import FileFun from "./module/fileFun";
+    import MyFooter from "../../components/Footer/index";
+    import FileFolder from "./module/fileFolder";
+    import MoreFun from "../../components/MoreFun/index";
 
     export default {
         name: "File",
