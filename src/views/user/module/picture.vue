@@ -55,7 +55,10 @@
                         header: {
                             "Content-Type": "multipart/form-data"
                         },
-                    }).then(user => _this.$store.commit("updateUser", user.data));
+                    }).then(user => function () {
+                        _this.$store.commit("updateUser", user.data)
+                        _this.$router.push("/user");
+                    });
                 }
             }
         }
