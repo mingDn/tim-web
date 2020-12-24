@@ -50,7 +50,7 @@
             },
             back() {
                 if (this.title === "输入账号") {
-                    this.$router.push("/load");
+                    this.$router.push("/login");
                 } else if (this.title === "修改密码") {
                     if (!this.isLoad) {
                         this.title = "输入账号";
@@ -99,7 +99,7 @@
                             alert(data.message);
                         }
                     });
-                    _this.$router.push("/load");
+                    _this.$router.push("/login");
                 }
             }
         }

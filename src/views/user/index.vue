@@ -1,10 +1,10 @@
 <template>
     <div>
-        <MyHeader v-bind:title="title" :isIcon="userIcon" :isMore="userMore" :isFun="isFun" @moreFun="moreFun"/>
+        <MyHeader :title="title" :isIcon="userIcon" :isMore="userMore" :isFun="isFun" @moreFun="moreFun"/>
         <div id="fun" v-if="isMoreFun">
             <ul>
                 <li>
-                    <router-link v-bind:to="{path: '/retrieve', query: {isLoad: true}}">
+                    <router-link :to="{path: '/retrieve', query: {isLoad: true}}">
                         <img src="../../assets/icon/修改密码.png">
                         <p>修改密码</p>
                     </router-link>
@@ -52,9 +52,9 @@
             logOut() {
                 let _this = this;
                 $.post("/tim/user/logout", {account: this.$store.state.user.account}, function (data) {
-                    if (data.info === 1) {
+                    if (data.info === "1") {
                         _this.$store.commit("updateUser", data.user);
-                        _this.$router.push("/load");
+                        _this.$router.push("/login");
                     } else {
                         alert(data.message);
                     }

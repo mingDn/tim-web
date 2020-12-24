@@ -1,6 +1,6 @@
 <template>
     <div>
-        <router-link v-bind:to="'/' + 'load'" replace>
+        <router-link v-bind:to="'/' + 'login'" replace>
             <img src="../assets/icon/back1.png" width="30" height="30" class="back">
         </router-link>
         <p class="welcome">欢迎注册QQ</p>
@@ -104,7 +104,7 @@
                     }, function (data) {
                         if (data.info === 1) {
                             alert(data.message);
-                            _this.$router.push("/load");
+                            _this.$router.push("/login");
                         } else {
                             alert(data.message);
                         }
