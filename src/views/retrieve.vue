@@ -69,7 +69,7 @@
                         account: _this.account,
                         verifyCode: _this.verifyCode
                     }, function (data) {
-                        if (data.info === 1) {
+                        if (data.info === "1") {
                             _this.title = "修改密码";
                             _this.isRevise = true;
                             alert(data.message);
@@ -93,7 +93,7 @@
                         account: _this.account,
                         password: password
                     }, function (data) {
-                        if (data.info === 1) {
+                        if (data.info === "1") {
                             alert(data.message);
                         } else {
                             alert(data.message);

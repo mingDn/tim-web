@@ -15,7 +15,7 @@ module.exports = {
     devServer: {
         proxy: {
             '/tim': {
-                target: 'http://localhost:8081', //代理接口
+                target: 'http://localhost:8088', //代理接口
                 changeOrigin: true, //设置是否跨域
                 ws: true,
                 pathRewrite: { //访问路径重写
